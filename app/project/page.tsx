@@ -1,11 +1,15 @@
 import React from "react";
+import Project from "../features/Projects";
 
-const page = () => {
+const Page = () => {
   return (
-    <div>
+    <>
       <h2>Project Page</h2>
-    </div>
+      <div className="flex justify-center">
+        <Project />
+      </div>
+    </>
   );
 };
 
-export default page;
+export default Page;

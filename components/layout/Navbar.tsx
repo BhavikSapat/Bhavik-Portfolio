@@ -12,16 +12,10 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Separator } from "@/components/ui/separator";
 import { useTheme } from "next-themes";
+import { list } from "@/app/data";
 
 const Page = () => {
   const { setTheme } = useTheme();
-
-  const list = [
-    { name: "Home", link: "/" },
-    { name: "About", link: "/about" },
-    { name: "Project", link: "/project" },
-    { name: "Contact", link: "/contact" },
-  ];
 
   return (
     <div className="relative z-50 flex w-full items-center align-center justify-between lg:flex-row  p-5 lg:p-3 ">
@@ -57,12 +51,10 @@ const Page = () => {
 
       <div className="flex items-center">
         <DropdownMenu>
-          <DropdownMenuTrigger>
-            <Button variant="outline" size="icon">
-              <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-              <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-              {/* <span className="sr-only">Toggle theme</span> */}
-            </Button>
+          <DropdownMenuTrigger className="inline-flex items-center justify-center rounded-lg border h-9 w-9 bg-background hover:bg-accent text-accent-foreground">
+            <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+            <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+            <span className="sr-only">Toggle theme</span>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuItem onClick={() => setTheme("light")}>
