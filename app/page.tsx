@@ -19,7 +19,7 @@ const Page = () => {
           <div className="flex justify-center">
             {/* <div className="relative w-[170px] h-[170px] md:w-[300px] md:h-[300px] bg-yellow-400 z-0 rounded-full overflow-visible"> */}
             <Image
-              src="/bhavik.png"
+              src="/havik.png"
               alt="Bhavik Sapat"
               width={330}
               height={330}
